@@ -1,0 +1,17 @@
+<header class="header__popup">
+	<h1>Transfer coins</h1>
+</header>
+<main class="main__popup">
+	<form class="form__transfer" action="/users/transfer" method="post">
+		<!-- <input type="hidden" name="_csrf" value="{{csrfToken}}"> -->
+	    <label>Transfer ammount <input type="number" name="ammount"></label>
+        <select name="to">
+            {% for user in users %}
+				{% if current_user._id !== user.doc._id %}
+	            <option value="{{user.doc._id}}">{{user.doc.username}}</option>
+				{% endif %}
+			{% endfor %}
+        </select>
+		<button class="button button_primary" type="submit" name="button">Transfer</button>
+	</form>
+</main>

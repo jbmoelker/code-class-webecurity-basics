@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div className='mdl-card mdl-shadow--2dp match-card'>
+	<div className='mdl-card__title'>
+		<h2 className='mdl-card__title-text'>Create Account</h2>
+	</div>
+	<div className='mdl-card__supporting-text'>
+		Enter a username and password to register.
+	</div>
+	<div className='mdl-card__actions mdl-card--border'>
+		<form action='/users/new' method='POST'>
+			<div className='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+				<input className='mdl-textfield__input' type='text' pattern='[0-9]+' id='homeScore' />
+				<label className='mdl-textfield__label' for='homeScore'>{this.props.match.homeTeam}</label>
+				<span className='mdl-textfield__error'>Input is not a number!</span>
+			</div>
+			<div className='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+				<input className='mdl-textfield__input' type='text' pattern='[0-9]+' id='awayScore' />
+				<label className='mdl-textfield__label' for='awayScore'>{this.props.match.awayTeam}</label>
+				<span className='mdl-textfield__error'>Input is not a number!</span>
+			</div>
+			<button className='mdl-button mdl-js-button mdl-button--raised'>Save</button>
+		</form>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<section class="slotmachine">
+		<header class="header__slotmachine">
+			<button class="button button_header__nav button__player" type="button" name="button" data-button-profile>
+				<!-- <img src="/images/pokemons/player.svg" alt="mew slot image"> -->
+			</button>
+			<button class="button button_header__nav button__transfer" type="button" name="button" data-button-transfer>
+				<!-- <img src="/images/pokemons/fight.svg" alt="mew slot image"> -->
+			</button>
+			<p class="spin_counter onclick=javascript:function(){console.log('yolo')}" data-spin-counter>spins left: {{current_user.balance/2}}</p>
+		</header>
+		<ul class="slots" data-slot-list>
+			<li class="slot_item">
+				<img class="image__slot_item" src="/images/pokemons/bullbasaur.svg" alt="bulbasaur slot image">
+			</li>
+			<li class="slot_item">
+				<img class="image__slot_item" src="/images/pokemons/charmander.svg" alt="charmander slot image">
+			</li>
+			<li class="slot_item">
+				<img class="image__slot_item" src="/images/pokemons/eevee.svg" alt="eevee slot image">
+			</li>
+			<li class="slot_item">
+				<img class="image__slot_item" src="/images/pokemons/mew.svg" alt="mew slot image">
+			</li>
+		</ul>
+		<footer class="footer__slotmachine">
+			<aside class="scoreboard score" title="Total pokepoints">
+				vault: <span data-vault-value>{{current_user.balance}}</span>
+			</aside>
+			<aside class="scoreboard win" title="Last wound win">
+				last spin: <span data-spin-value>--</span>
+			</aside>
+			<button class="button button__spin" type="button" name="spin_button" data-spin-button>spin!</button>
+		</footer>
+	</section>
+	<div class="blur" data-main-blur >
+		<section class="popup" data-profile-popup >
+			{%include "profile/profile.html" %}
+		</section>
+		<section class="popup" data-transfer-popup >
+			{%include "transfer/transfer.html" %}
+		</section>
+	</div>
+{% endblock %}

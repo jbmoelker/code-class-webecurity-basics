@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block js%}
+	<script type="text/javascript">
+	</script>
+{% endblock %}
+
+{% block header %}
+<header class="header__login">
+	<h1 class="header_title">pokéslots</h1>
+	<h2 class="header_subtitle">gotta spin 'em all !</h2>
+</header>
+{% endblock %}
+
+{% block content %}
+	<section class="section__login">
+		<header class="header_section__login">
+			<h1 class="header_title">Sign up</h1>
+			<h2 class="header_subtitle">and spin 'em all !</h2>
+		</header>
+		<main>
+			<form id="signup_form" class="form__login" action="/signup" method="post">
+				{% if error %}
+				<label class="label_sction__error" for="signup_form">{{error}}</label>
+				{% endif %}
+				<input class="input" type="text" name="username" placeholder="Username">
+				<input class="input" type="password" name="password" placeholder="Password">
+				<input class="input" type="password" name="password" placeholder="Repeat password">
+			</form>
+		</main>
+		<footer class="footer_section__login">
+			<button class="button__transparant" form="signup_form" type="submit" name="button">Signup</button>
+		</footer>
+	</section>
+{% endblock %}

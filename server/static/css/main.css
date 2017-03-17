@@ -1,0 +1,313 @@
+:root {
+  --pokemon-red: #ef4144;
+  --pokemon-black: #302d2d;
+  --pokemon-white: #f6f7f8;
+  --pokemon-yellow: #f6bd20;
+}
+
+@font-face {
+    font-family: 'FishFingers';
+    src:  url('/fonts/fishfingers.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FishFingersLight';
+    src:  url('fonts/fishfingers-light.woff') format('woff');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+}
+
+main.main__page {
+    padding: 20px 10px;
+}
+
+header.header__page, header.header__login {
+    font-family: 'FishFingers', sans-serif;
+    background-color: var(--pokemon-black);
+    color: var(--pokemon-white);
+    border-bottom: 15px solid var(--pokemon-red);
+    text-align: center;
+    padding: 15px 0;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.87);
+}
+
+header.header__login {
+    background-color: var(--pokemon-white);
+    color: var(--pokemon-black);
+    border-bottom: 15px solid var(--pokemon-black);
+}
+
+.header__page .header_title,
+.header__page .header_subtitle,
+.header__login .header_title,
+.header__login .header_subtitle,
+.header_section__login .header_title,
+.header_section__login .header_subtitle {
+    padding: 0;
+    margin: 0;
+}
+
+.header__page > .header_title, .header__login > .header_title {
+    font-size: 5rem;
+}
+
+.header__page > .header_subtitle, .header__login > .header_subtitle {
+    font-size: 3rem;
+    color: var(--pokemon-yellow);
+}
+
+.slotmachine {
+    width: 100%;
+    background-color: var(--pokemon-red);
+    border: 3px solid var(--pokemon-black);
+    padding: 0;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.87);
+}
+.header__slotmachine {
+    background-color: var(--pokemon-black);
+    padding: 15px 50px;
+    border-bottom: var(--pokemon-white) 2px solid;
+}
+
+.footer__slotmachine {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__slotmachine > *{
+    margin: 0 5px;
+}
+
+ul.slots {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 15px 50px 5px;
+}
+
+.slot_item {
+    background-color: var(--pokemon-white);
+    border: 2px solid var(--pokemon-black);
+    border-radius: 3px;
+    float: left;
+    margin: 0 5px;
+    flex-grow: 1;
+    box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.87);
+}
+
+.image__slot_item {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: opacity .1s linear;
+}
+
+.image__slot_item.fade_out {
+    opacity: 0.2;
+}
+
+.image__slot_item.fade_in {
+
+}
+
+.button__spin {
+    font-family: FishFingers;
+    font-size: 30px;
+    background-color: var(--pokemon-yellow);
+    padding: 8px 25px;
+    line-height: 30px;
+}
+.button__spin:active {
+    background-color: #DDAA1D;
+}
+
+.button {
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.87);
+    cursor: pointer;
+}
+
+.button_primary {
+    font-family: FishFingers;
+    font-size: 30px;
+    background-color: var(--pokemon-yellow);
+    padding: 8px 25px;
+    line-height: 30px;
+}
+
+.button:active, .button:focus {
+    outline: 0;
+}
+
+.button_header__nav {
+    background-color: var(--pokemon-white);
+    margin: 0 5px;
+    width: 35px;
+    height: 35px;
+    border: 3px solid var(--pokemon-white);
+}
+
+.button_header__nav:active, .button_header__nav:focus {
+    outline: 0;
+}
+
+.button_header__nav:active {
+    background-color: #ccc;
+}
+
+.button_header__nav.button__player {
+    background-image: url(/images/pokemons/player.svg);
+}
+
+.button_header__nav.button__transfer {
+    background-image: url(/images/pokemons/money-bag.svg);
+}
+
+.scoreboard {
+    background-color: var(--pokemon-black);
+    border-radius: 6px;
+    color: var(--pokemon-yellow);
+    font-weight: bolder;
+    font-family: "Courier New", Courier;
+    line-height: 46px;
+    padding: 0 15px;
+}
+
+.input {
+    width: 100%;
+    cursor: auto;
+    padding: 10px 5px;
+    border: 0;
+    border-radius: 6px;
+    margin: 10px 0;
+    font-size: x-large;
+    box-sizing: border-box;
+}
+
+.form__login {
+    padding: 30px 10px;
+}
+
+.section__login {
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--pokemon-white);
+    box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.87);
+    border-radius: 6px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.header_section__login {
+    text-align: center;
+}
+
+.header_section__login .header_title,
+.header_section__login .header_subtitle {
+    font-family: 'FishFingers', sans-serif;
+    font-size: 2rem;
+    margin: 5px 0;
+    color: var(--pokemon-red);
+}
+
+.spin_counter {
+    color: var(--pokemon-yellow);
+    font-family: 'FishFingers';
+    float: right;
+    font-size: 22px;
+    line-height: 0px;
+}
+
+.button__transparant {
+    color: var(--pokemon-yellow);
+    border: 0;
+    font-family: 'FishFingers';
+    font-size: 1.5rem;
+    background: transparent;
+}
+
+.footer_section__login {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.header_link__logout {
+	position: absolute;
+	right: 15px;
+	color: var(--pokemon-yellow);
+	text-decoration: none;
+}
+
+.label_sction__error {
+    color: var(--pokemon-red);
+    font-family: FishFingers;
+    font-size: 25px;
+}
+
+.blur {
+	width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.4);
+	display: none;
+}
+
+.blur.visible {
+	display: block !important;
+}
+
+.popup {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: var(--pokemon-white);
+    box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.87);
+    font-family: FishFingers;
+    padding: 0 75px 35px;
+    border-radius: 6px;
+    display: none;
+}
+
+.popup.visible {
+    display: table !important;
+}
+
+.popup header {
+    text-align: center;
+    padding: 5px 0 0 0;
+    font-size: 2rem;
+}
+
+.popup_img__main {
+    height: 200px;
+}
+
+.main__popup {
+    text-align: center;
+}
+
+.popup main p {
+    font-size: 3rem;
+}
+
+.form__transfer label input, .form__transfer select {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px 5px;
+}
